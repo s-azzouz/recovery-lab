@@ -80,7 +80,7 @@ The site is designed mobile-first and tested across the following breakpoints:
 
 ## User Stories
 
-_To be added — user stories will be written before wireframing begins and used to validate the finished application against original goals._
+As a customer I would like to see clear navigation and structuring of the site I am visiting, the layout should be clear and easy to navigate, and I would like to be able to view clearly the purpose of the site and what it is offering me. As an injured athlete, I want a clear call-to-action on the homepage, so that I know what to do next (e.g. start assessment, book consultation).
 
 ## Tech Stack
 
