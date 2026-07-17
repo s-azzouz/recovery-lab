@@ -1,9 +1,8 @@
-# recovery-lab
-# RecoverStrong
+# RecoveryLab
 
 ## Purpose
 
-RecoverStrong is a website that helps athletes and gym-goers safely recover from injuries. It provides personalised training programmes, rehabilitation advice, mobility routines and recovery plans tailored to individual needs, and educates users on injury prevention so they can return to training safely.
+RecoveryLab is a website that helps athletes and gym-goers safely recover from injuries. It provides personalised training programmes, rehabilitation advice, mobility routines and recovery plans tailored to individual needs, and educates users on injury prevention so they can return to training safely.
 
 ## Target Audience
 
@@ -27,18 +26,14 @@ RecoverStrong is a website that helps athletes and gym-goers safely recover from
 ## Features
 
 - Home page with hero section and call-to-action
-- Recovery assessment questionnaire
+- Recovery Plan
 - Injury library
-- Training plans
-- Exercise library
-- Recovery tips and blog
 - Contact page
 - About page
-- Testimonials
 
 ## Navigation
 
-Home | About | Recovery Plans | Injury Library | Exercises | Blog | Contact
+Home | Recovery Plan | Injury Library | Contact| About 
 
 ## Design System
 
