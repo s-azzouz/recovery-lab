@@ -64,6 +64,12 @@ _This section will be expanded once wireframes and mockups are complete. It will
 
 Wireframes and mockups will be added to a `/design` directory and referenced here as they are produced.
 
+### Homepage Wireframe
+
+![Homepage wireframe – desktop and mobile](design/recoverylab-homepage-wireframe.svg)
+
+The homepage wireframe shows the main navigation (Homepage, Recovery Plan, Injury Library, Contact, About), a clear visual hierarchy from hero to feature cards to footer, and consistent card styling across the three feature highlights. The mobile layout collapses the navigation into a menu icon and restacks the feature cards vertically, preserving the same content order and priority as desktop.
+
 ## Accessibility
 
 - Colour combinations checked against WCAG AA contrast requirements (4.5:1 minimum for body text)
