@@ -53,3 +53,8 @@ img {
   white-space: nowrap;
   border: 0;
 }
+
+/* ===== Header ===== */
+.logo.img {
+  height: 32px; 
+} 
