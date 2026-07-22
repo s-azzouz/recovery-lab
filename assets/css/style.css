@@ -55,9 +55,6 @@ img {
 }
 
 /* ===== Header ===== */
-.logo.img {
-  height: 32px; 
-} /* ===== Header ===== */
 .site-header {
   display: flex;
   align-items: center;
@@ -128,6 +125,7 @@ img {
 .nav-toggle-icon::after {
   top: 8px;
 }
+
 /* ===== Hero ===== */
 .hero {
   background-color: var(--color-white);
