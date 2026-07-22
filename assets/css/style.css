@@ -57,4 +57,74 @@ img {
 /* ===== Header ===== */
 .logo.img {
   height: 32px; 
-} 
+} /* ===== Header ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-dark-blue);
+  padding: 1rem 2rem;
+}
+
+.logo-img {
+  height: 32px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus,
+.nav-menu a[aria-current="page"] {
+  border-bottom-color: var(--color-orange);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle-icon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-white);
+}
+
+.nav-toggle-icon::before {
+  top: -8px;
+}
+
+.nav-toggle-icon::after {
+  top: 8px;
+}
