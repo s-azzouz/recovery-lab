@@ -212,3 +212,37 @@ img {
   font-size: 0.95rem;
   color: var(--color-dark-grey);
 }
+/* ===== Testimonials ===== */
+.testimonials {
+  background-color: var(--color-dark-blue);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: var(--color-white);
+  margin-bottom: 2rem;
+}
+
+.testimonial-card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+}
+
+.testimonial-card blockquote {
+  font-style: italic;
+  color: var(--color-dark-grey);
+  margin-bottom: 0.75rem;
+}
+
+.testimonial-card cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-emerald);
+  font-size: 0.9rem;
+}
