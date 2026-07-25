@@ -296,7 +296,7 @@ img {
   }
   
   .nav-menu {
-    flex-basis: 100% 
+    flex-basis: 100% ;
     order: 2; 
   }
 
