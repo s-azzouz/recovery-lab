@@ -451,3 +451,47 @@ img {
 .form-confirmation:empty {
   display: none;
 }
+
+/* ===== Contact Page ===== */
+.contact-details {
+  padding: 2rem 2rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-list {
+  list-style: none;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-item {
+  background-color: var(--color-white);
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.contact-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.contact-item p {
+  font-size: 0.95rem;
+  color: var(--color-dark-grey);
+  line-height: 1.6;
+}
+
+.contact-item a {
+  color: var(--color-emerald);
+  font-weight: 600;
+}
+
+.contact-item a:hover,
+.contact-item a:focus {
+  text-decoration: underline;
+}
