@@ -296,7 +296,8 @@ img {
   }
   
   .nav-menu {
-    flex-basis: 100%  
+    flex-basis: 100% 
+    order: 2; 
   }
 
   .nav-menu {
@@ -344,7 +345,7 @@ img {
     order: 2;
   }
   .nav-toggle {
-    order:1;
+    order:0;
 }
   .nav-menu {
     text-align: left;   
