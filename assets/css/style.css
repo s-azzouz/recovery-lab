@@ -291,6 +291,14 @@ img {
     display: block;
   }
 
+  .main-nav {
+    flex-wrap: wrap;
+  }
+  
+  .nav-menu {
+    flex-basis: 100%  
+  }
+
   .nav-menu {
     display: none;
     flex-direction: column;
