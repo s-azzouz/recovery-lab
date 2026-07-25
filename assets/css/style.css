@@ -346,10 +346,18 @@ img {
   }
   .nav-toggle {
     order:0;
-}
+  }
   .nav-menu {
     text-align: left;   
   }
+  .about-content ,
+   .disclaimer ,
+   .contact-list ,
+   .injury-list {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+   }
 }
 /* ===== Page Intro (Recovery Plan, and reusable for other pages) ===== */
 .page-intro {
