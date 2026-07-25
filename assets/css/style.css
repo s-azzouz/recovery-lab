@@ -337,6 +337,18 @@ img {
     flex-direction: column;
     gap: 0.75rem;
   }
+  .site-header {
+    flex-direction: row;
+  }
+  .logo {
+    order: 2;
+  }
+  .nav-toggle {
+    order:1;
+}
+  .nav-menu {
+    text-align: left;   
+  }
 }
 /* ===== Page Intro (Recovery Plan, and reusable for other pages) ===== */
 .page-intro {
