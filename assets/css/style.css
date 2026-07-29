@@ -495,3 +495,42 @@ img {
 .contact-item a:focus {
   text-decoration: underline;
 }
+/* ===== Injury Library Page ===== */
+.injury-library {
+  padding: 2rem 2rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.injury-list {
+  list-style: none;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.injury-item {
+  background-color: var(--color-white);
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.injury-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.injury-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.injury-item p {
+  font-size: 0.95rem;
+  color: var(--color-dark-grey);
+  line-height: 1.6;
+}
