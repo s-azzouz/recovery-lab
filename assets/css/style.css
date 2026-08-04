@@ -540,3 +540,28 @@ img {
   color: var(--color-dark-grey);
   line-height: 1.6;
 }
+
+/* ===== Injury Library Images ===== */
+.injury-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.injury-image {
+  width: 56px;
+  height: 78px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .injury-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .injury-image {
+    width: 48px;
+    height: 67px;
+  }
+}
