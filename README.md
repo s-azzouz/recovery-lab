@@ -4,24 +4,15 @@
 
 RecoveryLab is a website that helps athletes and gym-goers safely recover from injuries. It provides personalised training programmes, rehabilitation advice, mobility routines and recovery plans tailored to individual needs, and educates users on injury prevention so they can return to training safely.
 
-## Target Audience
+## User Stories
 
-18–45 year old athletes, gym-goers, runners, footballers, weightlifters, CrossFit athletes and anyone recovering from injury who wants to:
+**As an injured athlete, I want to apply for a recovery consultation through a short online form, so that I can get expert help without a lengthy or complicated sign-up process.**
 
-- Learn about common injuries
-- Find a recovery programme suited to them
-- Improve mobility and flexibility
-- Build strength safely
-- Understand when they are ready to return to sport
-- Contact a coach for a personalised recovery plan
+**As a gym-goer recovering from injury, I want to browse a library of common injuries, so that I understand my condition before applying for a consultation.**
 
-## Site Owner Goals
+## Site Owner Story
 
-- Build trust within the fitness industry
-- Generate new coaching clients
-- Sell personalised rehabilitation programmes
-- Encourage visitors to book consultations
-- Grow an online community
+**As the site owner, I want visitors to find clear, trustworthy information before booking, so that they feel confident applying for a consultation.**
 
 ## Features
 
