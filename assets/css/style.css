@@ -220,7 +220,9 @@ img {
 }
 /* ===== Testimonials ===== */
 .testimonials {
-  background-color: var(--color-dark-blue);
+  background-image: linear-gradient(rgba(22, 58, 95, 0.85), rgba(22, 58, 95, 0.85)), url(../images/testimonials_bg.jpg);
+  background-size: cover;
+  background-position: center;
   padding: 3rem 2rem;
   text-align: center;
 }
