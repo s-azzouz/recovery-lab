@@ -89,11 +89,23 @@ _To be documented once a manual testing plan is created. Will include test cases
 
 ## Deployment
 
-_To be documented once a hosting/deployment method is chosen._
+This site is deployed using **GitHub Pages**, directly from the `main` branch of this repository.
+
+**Steps taken to deploy:**
+1. Pushed the completed project to the `main` branch on GitHub
+2. In the repository, navigated to **Settings > Pages**
+3. Under **Source**, selected the `main` branch and the `/ (root)` folder
+4. Saved, and GitHub Pages automatically built and published the site
+5. The live site is available at: `https://s-azzouz.github.io/recovery-lab/`
+
+Any future changes pushed to `main` are automatically redeployed by GitHub Pages within a few minutes.
 
 ## Attribution
 
-Any code, libraries, or resources sourced externally will be credited here and via comments in the relevant files.
+- **Background images** (hero and testimonials sections) sourced from [Unsplash](https://unsplash.com), free to use under the Unsplash License.
+- **Fonts**: Poppins and Open Sans, sourced from [Google Fonts](https://fonts.google.com), free to use under the Open Font License.
+- **Icons and diagrams**: all icons, the site logo, and the injury body-diagrams are custom-made SVGs created specifically for this project.
+- No other external code libraries or frameworks were used; all HTML, CSS, and JavaScript were hand-written.
 
 ## Development Process
 
