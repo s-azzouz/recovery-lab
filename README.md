@@ -73,9 +73,10 @@ The homepage wireframe shows the main navigation (Homepage, Recovery Plan, Injur
 
 The site is designed mobile-first and tested across the following breakpoints:
 
-- Mobile: _TBC_
-- Tablet: _TBC_
-- Desktop: _TBC_
+- Mobile: up to 768px (single-column layout, collapsed hamburger navigation)
+- Tablet/Desktop: 769px and above (multi-column layouts, full horizontal navigation)
+
+The primary breakpoint (`max-width: 768px`) was chosen to comfortably cover common mobile and small-tablet screen widths, with the layout scaling fluidly above that point rather than relying on additional fixed breakpoints.
 
 ## User Stories
 
