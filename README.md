@@ -85,30 +85,33 @@ _TBC_
 
 ## Testing Procedure
 
-The testing procedure was a constant process throughout the creation of this website, in order to prevent small issues becoming a problem later down the line. This involved early deployment and constant use of the website throughout, noting and fixing any issues at the point of discovery. Towards the end of development, use of validation tools were implemented in order to thoroughly assess what issues needed addressing and to ensure an optimal end result. Validation tools used listed below:
-HTML VALIDATION- validator.w3.org
-This was used to ensure the HTML was clear of any issues. Pasting each page into the validator returned no issues, and this ensured it was safe to move on.
-CSS VALIDATION- jigsaw.w3.org/css-validator
-This site was used to analyse the CSS code, and also returned no issues.
-JAVASCRIPT- jshint.com
-This site was used to analyse the javascript code. First test run returned 13 issues:
-13 warnings
-4	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-5	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-7	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-8	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-12	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-15	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-17	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-20	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-22	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-24	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-25	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-26	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-26	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+## Code Validation
 
-JSHint initially flagged ES6 syntax as errors due to its default ES5 configuration. Setting the linter's environment to ES6 resolved all warnings, confirming the code itself contains no genuine issues — only modern syntax the linter wasn't initially configured to recognise.
-_To be documented once a manual testing plan is created. Will include test cases, browsers/devices covered, and a log of bugs found and fixed._
+Validation was a continuous process throughout development, not left until the end — issues were noted and fixed at the point of discovery to prevent small problems compounding later. In the final stage of development, formal validation tools were used to systematically confirm the codebase met web standards.
+
+### HTML Validation — [validator.w3.org](https://validator.w3.org)
+
+Each page (Home, Recovery Plan, Injury Library, Contact, About) was validated individually via the deployed GitHub Pages URLs. All five pages returned:
+
+> Document checking completed. No errors or warnings to show.
+
+### CSS Validation — [jigsaw.w3.org/css-validator](https://jigsaw.w3.org/css-validator)
+
+The site's single stylesheet (`assets/css/style.css`) was validated via its live URL and returned no errors or warnings.
+
+### JavaScript Validation — [jshint.com](https://jshint.com)
+
+The site's JavaScript (`assets/js/script.js`) was pasted into JSHint for linting. The first run returned 13 warnings, all related to ES6 syntax:
+'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+'template literal syntax' is only available in ES6 (use 'esversion: 6').
+
+These warnings were caused by JSHint's default configuration targeting ES5, an older JavaScript standard that predates `const`, `let`, arrow functions, and template literals. Adding `/* jshint esversion: 6 */` at the top of the file configured the linter to check against ES6 — the standard actually used in this project — which resolved all 13 warnings. This confirmed the JavaScript itself contained no genuine errors, the warnings were a linter configuration mismatch, not a code defect.
+
+## Manual Testing
+
+_[This section still needs completing — see note below]_
 
 ## Deployment
 
