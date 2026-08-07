@@ -567,3 +567,31 @@ img {
     height: 67px;
   }
 }
+/* ===== About Page ===== */
+.about-content,
+.disclaimer {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  background-color: var(--color-white);
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+}
+
+.about-content h2,
+.disclaimer h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-content p,
+.disclaimer p {
+  font-size: 0.95rem;
+  color: var(--color-dark-grey);
+  line-height: 1.6;
+}
+
+.disclaimer {
+  border-left: 4px solid var(--color-orange);
+  background-color: #FFF8F3;
+}
