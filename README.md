@@ -61,10 +61,12 @@ Wireframes and mockups will be added to a `/design` directory and referenced her
 
 The homepage wireframe shows the main navigation (Homepage, Recovery Plan, Injury Library, Contact, About), a clear visual hierarchy from hero to feature cards to footer, and consistent card styling across the three feature highlights. The mobile layout collapses the navigation into a menu icon and restacks the feature cards vertically, preserving the same content order and priority as desktop.
 
+
 ## Accessibility
 
 - Colour combinations checked against WCAG AA contrast requirements (4.5:1 minimum for body text)
-- Alt text provided for all non-text content
+- Alt text provided for all meaningful, content-bearing images (logo, feature icons, injury diagrams)
+- Decorative background images (hero and testimonials sections) were implemented using CSS `background-image` rather than HTML `<img>` tags. This is a deliberate accessibility choice: since these images are purely atmospheric and convey no information beyond visual mood, WCAG guidance recommends excluding decorative images from screen reader content entirely, rather than describing them. CSS backgrounds achieve this automatically, as they are not exposed to assistive technology
 - Semantic HTML used throughout for screen reader compatibility
 
 ## Responsive Design
