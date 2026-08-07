@@ -109,9 +109,43 @@ The site's JavaScript (`assets/js/script.js`) was pasted into JSHint for linting
 
 These warnings were caused by JSHint's default configuration targeting ES5, an older JavaScript standard that predates `const`, `let`, arrow functions, and template literals. Adding `/* jshint esversion: 6 */` at the top of the file configured the linter to check against ES6 — the standard actually used in this project — which resolved all 13 warnings. This confirmed the JavaScript itself contained no genuine errors, the warnings were a linter configuration mismatch, not a code defect.
 
+
 ## Manual Testing
 
-_[This section still needs completing — see note below]_
+Testing was carried out continuously throughout development rather than only at the end, with issues identified and resolved as soon as they were discovered. Formal cross-browser and device testing was carried out once each page's core build was complete.
+
+### Devices & Browsers Tested
+
+| Device | Browser | Notes |
+|---|---|---|
+| MacBook Pro (desktop) | Safari | Primary development/testing browser |
+| MacBook Pro (desktop) | Opera | Used to cross-check rendering consistency |
+| iPhone (mobile) | Safari | Used to test responsive breakpoint and mobile navigation |
+
+### Test Cases — User Story Validation
+
+| User Story | Test | Result |
+|---|---|---|
+| As an injured athlete, I want to apply for a recovery consultation through a short online form | Submit form with all required fields completed | ✅ Confirmation message displays, form resets |
+| | Submit form with required fields left empty | ✅ Red error messages appear per field, submission blocked |
+| | Submit form with an invalid email format | ✅ "Please enter a valid email address" error shown |
+| As a gym-goer recovering from injury, I want to browse a library of common injuries | Navigate to Injury Library and view all 6 entries | ✅ All entries display with heading, description, and diagram |
+| Site-wide navigation | Click each nav link on desktop | ✅ All links navigate to the correct page |
+| | Open/close mobile menu via hamburger icon | ✅ Menu toggles open and closed, `aria-expanded` updates correctly |
+| Responsive layout | Resize browser below 768px width | ✅ Nav collapses to hamburger, feature cards stack, layout remains readable |
+
+### Bugs Found & Fixed
+
+| Bug | Cause | Fix |
+|---|---|---|
+| Stylesheet not loading; page rendered unstyled | Duplicated quotation marks on multiple HTML attributes (e.g. `rel=""stylesheet"`), corrupting the `<link>` tag | Corrected all malformed attribute quotes across `index.html` |
+| Mobile navigation menu overlapped the hamburger toggle button | `.main-nav` remained a row-based flex container on mobile instead of wrapping | Added `flex-wrap: wrap` and `flex-basis: 100%` to force the menu onto its own line |
+| Hamburger icon rendered below the nav menu instead of above it | Missing `order` values on flex children | Set explicit `order` values on `.nav-toggle` and `.nav-menu` |
+| Hero background image not displaying | Invalid space between `linear-gradient` and its opening parenthesis, invalidating the CSS declaration | Removed the space so the function syntax was valid |
+| CSS syntax errors cascading across the stylesheet | A missing semicolon after one property value | Added the missing semicolon; confirmed fix via VS Code's Problems panel |
+| JSHint reported 13 warnings on `script.js` | Linter defaulted to ES5, flagging valid ES6 syntax (`const`, `let`, arrow functions, template literals) as errors | Added `/* jshint esversion: 6 */` to the top of the file, resolving all warnings |
+
+All bugs listed above were identified through manual testing in-browser and resolved before final deployment. No known issues remain in the current build.
 
 ## Deployment
 
