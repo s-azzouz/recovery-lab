@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 // RecoveryLab — main JavaScript file
 // Interactivity (nav toggle, questionnaire logic, form validation) will be added here incrementally.
 // Mobile navigation toggle
