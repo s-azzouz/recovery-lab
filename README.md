@@ -61,7 +61,6 @@ Wireframes and mockups will be added to a `/design` directory and referenced her
 
 The homepage wireframe shows the main navigation (Homepage, Recovery Plan, Injury Library, Contact, About), a clear visual hierarchy from hero to feature cards to footer, and consistent card styling across the three feature highlights. The mobile layout collapses the navigation into a menu icon and restacks the feature cards vertically, preserving the same content order and priority as desktop.
 
-
 ## Accessibility
 
 - Colour combinations checked against WCAG AA contrast requirements (4.5:1 minimum for body text)
@@ -111,7 +110,6 @@ The site's JavaScript (`assets/js/script.js`) was pasted into JSHint for linting
 'template literal syntax' is only available in ES6 (use 'esversion: 6').
 
 These warnings were caused by JSHint's default configuration targeting ES5, an older JavaScript standard that predates `const`, `let`, arrow functions, and template literals. Adding `/* jshint esversion: 6 */` at the top of the file configured the linter to check against ES6 — the standard actually used in this project — which resolved all 13 warnings. This confirmed the JavaScript itself contained no genuine errors, the warnings were a linter configuration mismatch, not a code defect.
-
 
 ## Manual Testing
 
