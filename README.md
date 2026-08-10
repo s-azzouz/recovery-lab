@@ -4,6 +4,25 @@
 
 RecoveryLab is a website that helps athletes and gym-goers safely recover from injuries. It provides personalised training programmes, rehabilitation advice, mobility routines and recovery plans tailored to individual needs, and educates users on injury prevention so they can return to training safely.
 
+## Target Audience
+
+18–45 year old athletes, gym-goers, runners, footballers, weightlifters, CrossFit athletes and anyone recovering from injury who wants to:
+
+- Learn about common injuries
+- Find a recovery programme suited to them
+- Improve mobility and flexibility
+- Build strength safely
+- Understand when they are ready to return to sport
+- Contact a coach for a personalised recovery plan
+
+## Site Owner Goals
+
+- Build trust within the fitness industry
+- Generate new coaching clients
+- Sell personalised rehabilitation programmes
+- Encourage visitors to book consultations
+- Grow an online community
+
 ## User Stories
 
 **As an injured athlete, I want to apply for a recovery consultation through a short online form, so that I can get expert help without a lengthy or complicated sign-up process.**
@@ -77,17 +96,20 @@ The site is designed mobile-first and tested across the following breakpoints:
 
 The primary breakpoint (`max-width: 768px`) was chosen to comfortably cover common mobile and small-tablet screen widths, with the layout scaling fluidly above that point rather than relying on additional fixed breakpoints.
 
-## User Stories
-
-As a customer I would like to see clear navigation and structuring of the site I am visiting, the layout should be clear and easy to navigate, and I would like to be able to view clearly the purpose of the site and what it is offering me. As an injured athlete, I want a clear call-to-action on the homepage, so that I know what to do next (e.g. start assessment, book consultation).
-
 ## Tech Stack
 
-_TBC_
+- **HTML5** — semantic markup throughout
+- **CSS3** — custom, hand-written styles (no framework), using media queries for responsive design
+- **JavaScript (vanilla)** — interactivity, form validation, questionnaire logic
+- **Google Fonts** — Poppins (headings), Open Sans (body)
+
+No CSS/JS frameworks are used for this unit, in order to directly demonstrate front-end fundamentals (semantic HTML, custom CSS, and vanilla JS) as required by the assessment criteria.
 
 ## Testing Procedure
 
-## Code Validation
+Testing was carried out in two forms throughout this project: automated code validation using industry-standard tools, and manual testing of functionality, navigation, and responsiveness across devices and browsers.
+
+### Code Validation
 
 Validation was a continuous process throughout development, not left until the end — issues were noted and fixed at the point of discovery to prevent small problems compounding later. In the final stage of development, formal validation tools were used to systematically confirm the codebase met web standards.
 
@@ -111,7 +133,7 @@ The site's JavaScript (`assets/js/script.js`) was pasted into JSHint for linting
 
 These warnings were caused by JSHint's default configuration targeting ES5, an older JavaScript standard that predates `const`, `let`, arrow functions, and template literals. Adding `/* jshint esversion: 6 */` at the top of the file configured the linter to check against ES6 — the standard actually used in this project — which resolved all 13 warnings. This confirmed the JavaScript itself contained no genuine errors, the warnings were a linter configuration mismatch, not a code defect.
 
-## Manual Testing
+### Manual Testing
 
 Testing was carried out continuously throughout development rather than only at the end, with issues identified and resolved as soon as they were discovered. Formal cross-browser and device testing was carried out once each page's core build was complete.
 
