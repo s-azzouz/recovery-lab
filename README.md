@@ -80,6 +80,30 @@ Wireframes and mockups will be added to a `/design` directory and referenced her
 
 The homepage wireframe shows the main navigation (Homepage, Recovery Plan, Injury Library, Contact, About), a clear visual hierarchy from hero to feature cards to footer, and consistent card styling across the three feature highlights. The mobile layout collapses the navigation into a menu icon and restacks the feature cards vertically, preserving the same content order and priority as desktop.
 
+### Recovery Plan Wireframe
+
+![Recovery Plan wireframe – desktop and mobile](design/recoverylab-recovery-plan-wireframe.svg)
+
+The Recovery Plan page was designed as a short, clearly labelled application form, with required fields marked and grouped logically (contact details, then injury details). This directly supports the M(i) criterion for clear, unambiguous interaction feedback, later implemented through inline validation messaging.
+
+### Injury Library Wireframe
+
+![Injury Library wireframe – desktop and mobile](design/recoverylab-injury-library-wireframe.svg)
+
+Each injury is presented as a consistent card pairing a diagram with a heading and description, supporting quick scanning and reinforcing the consistent graphics principle (1.5).
+
+### Contact Wireframe
+
+![Contact wireframe – desktop and mobile](design/recoverylab-contact-wireframe.svg)
+
+Contact information is broken into distinct, scannable cards (Email, Phone, Hours, Location) rather than a single dense paragraph, prioritising ease of access over form filling.
+
+### About Wireframe
+
+![About wireframe – desktop and mobile](design/recoverylab-about-wireframe.svg)
+
+The About page separates general information from the medical disclaimer using distinct visual treatment, ensuring the disclaimer is never mistaken for decorative or secondary content (criterion 1.4).
+
 ## Accessibility
 
 - Colour combinations checked against WCAG AA contrast requirements (4.5:1 minimum for body text)
