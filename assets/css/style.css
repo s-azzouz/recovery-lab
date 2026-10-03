@@ -64,7 +64,8 @@ img {
 }
 
 .logo-img {
-  height: 72px;
+  height: 100px;
+  max-height: 70%;
 }
 
 .main-nav {
