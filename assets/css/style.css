@@ -129,15 +129,38 @@ img {
 
 /* ===== Hero ===== */
 .hero {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/hero-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 6rem 2rem; 
+  position: relative;
+  padding: 4rem 2rem;
   min-height: 60vh;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
