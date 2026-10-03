@@ -544,6 +544,10 @@ img {
 }
 
 /* ===== Injury Library Images ===== */
+.injury-text {
+  flex: 1;
+  min-width: 0;
+}
 .injury-item {
   display: flex;
   gap: 1.25rem;
