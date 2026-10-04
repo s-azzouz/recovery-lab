@@ -27,7 +27,13 @@ RecoveryLab is a website that helps athletes and gym-goers safely recover from i
 
 **As an injured athlete, I want to apply for a recovery consultation through a short online form, so that I can get expert help without a lengthy or complicated sign-up process.**
 
+![Finished Recovery Plan page](assets/screenshots/recovery-plan-final.pngscreenshots/recovery-plan-final.png)
+*The finished Recovery Plan page, showing the short consultation application form that fulfils this user story.*
+
 **As a gym-goer recovering from injury, I want to browse a library of common injuries, so that I understand my condition before applying for a consultation.**
+
+![Finished Injury Library page](assets/screenshots/injury-library-final.pngscreenshots/injury-library-final.png)
+*The finished Injury Library page, showing the body-diagram entries that fulfil this user story.*
 
 ## Site Owner Story
 
@@ -79,8 +85,8 @@ Wireframes and mockups will be added to a `/design` directory and referenced her
 ![Homepage wireframe – desktop and mobile](design/recoverylab-homepage-wireframe.svg)
 
 The homepage wireframe shows the main navigation (Homepage, Recovery Plan, Injury Library, Contact, About), a clear visual hierarchy from hero to feature cards to footer, and consistent card styling across the three feature highlights. The mobile layout collapses the navigation into a menu icon and restacks the feature cards vertically, preserving the same content order and priority as desktop.
-
-### Recovery Plan Wireframe
+?. ,BVCXZ`
+'L;### Recovery Plan Wireframe
 
 ![Recovery Plan wireframe – desktop and mobile](design/recoverylab-recovery-plan-wireframe.svg)
 
