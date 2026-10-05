@@ -175,17 +175,19 @@ Testing was carried out continuously throughout development rather than only at 
 | MacBook Pro (desktop) | Opera | Used to cross-check rendering consistency |
 | iPhone (mobile) | Safari | Used to test responsive breakpoint and mobile navigation |
 
+
 ### Test Cases — User Story Validation
 
-| User Story | Test | Result |
-|---|---|---|
-| As an injured athlete, I want to apply for a recovery consultation through a short online form | Submit form with all required fields completed | ✅ Confirmation message displays, form resets |
-| | Submit form with required fields left empty | ✅ Red error messages appear per field, submission blocked |
-| | Submit form with an invalid email format | ✅ "Please enter a valid email address" error shown |
-| As a gym-goer recovering from injury, I want to browse a library of common injuries | Navigate to Injury Library and view all 6 entries | ✅ All entries display with heading, description, and diagram |
-| Site-wide navigation | Click each nav link on desktop | ✅ All links navigate to the correct page |
-| | Open/close mobile menu via hamburger icon | ✅ Menu toggles open and closed, `aria-expanded` updates correctly |
-| Responsive layout | Resize browser below 768px width | ✅ Nav collapses to hamburger, feature cards stack, layout remains readable |
+| What Was Tested | Action Performed | Expected Result | Actual Result | Pass/Fail |
+|---|---|---|---|---|
+| Recovery Plan form submission | Filled all required fields correctly and clicked Submit | Confirmation message displays, form resets | Confirmation message displayed, form reset as expected | ✅ Pass |
+| Recovery Plan form validation | Submitted form with required fields left empty | Red error messages appear per field, submission blocked | Error messages appeared correctly, form did not submit | ✅ Pass |
+| Recovery Plan email validation | Entered an invalid email format and submitted | "Please enter a valid email address" error shown | Error message displayed as expected | ✅ Pass |
+| Injury Library content | Navigated to Injury Library and viewed all entries | All 6 entries display with heading, description, and diagram | All 6 entries displayed correctly | ✅ Pass |
+| Desktop navigation | Clicked each nav link in the header | Each link navigates to the correct page | All links navigated correctly | ✅ Pass |
+| Mobile navigation toggle | Resized to mobile width and clicked the hamburger icon | Menu opens and closes, `aria-expanded` updates | Menu toggled correctly, attribute updated as expected | ✅ Pass |
+| Responsive layout | Resized browser window below 768px | Nav collapses to hamburger, feature cards stack vertically | Layout adapted correctly at the breakpoint | ✅ Pass |
+
 
 ### Bugs Found & Fixed
 
