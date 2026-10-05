@@ -232,4 +232,30 @@ Any future changes pushed to `main` are automatically redeployed by GitHub Pages
 
 ## Development Process
 
-This project is developed using Git, with a separate commit for each feature or major adjustment. Commit messages describe what changed and why.
+This project followed an iterative development lifecycle, moving through planning, design, implementation, testing, and deployment — with earlier stages revisited as understanding of the project deepened.
+
+**Planning and Requirements**
+The project began with a milestone project plan defining the site's purpose, target audience, site owner goals, and potential features. User stories and a site owner story were written to capture what the finished site needed to achieve, and were later refined once the final feature set was confirmed, to ensure they accurately reflected what was built.
+
+**Design**
+A desktop and mobile wireframe was created for the homepage first, establishing the navigation structure, visual hierarchy, and card-based layout pattern that was then carried through to the remaining pages (Recovery Plan, Injury Library, Contact, About), each of which was also wireframed individually once the design system was established.
+
+**Development / Implementation**
+Each page was built HTML-first (semantic structure with no styling), followed by CSS in focused, single-purpose commits (e.g. header, hero, feature cards, forms), then JavaScript for interactivity such as the mobile navigation toggle and consultation form validation. The design system (colour palette, typography, spacing) was defined early using CSS custom properties, so later pages could reuse it consistently rather than duplicating values.
+
+**Testing and Debugging**
+Testing was carried out continuously throughout development, not only at the end. Real examples of this process include:
+- A stylesheet failing to load site-wide was traced to malformed, duplicated quotation marks in HTML attributes, and fixed by correcting the markup across every page.
+- A missing semicolon in a CSS declaration caused a cascade of unrelated-looking validator errors; this was diagnosed using VS Code's Problems panel rather than guesswork.
+- An accessibility review of the Injury Library page (raised in tutor feedback) revealed a class name mismatch between the HTML and CSS, meaning images were never actually being sized — this was corrected, and a flex-based text wrapper was added to resolve the resulting narrow-text-wrapping issue.
+- Feedback also identified insufficient colour contrast on the hero banner text against its background photograph. This was resolved using a combination of a text-shadow, a darkened background image via a CSS filter, and a stronger overlay — rather than a single fix, to ensure contrast held across all areas of the image.
+
+Formal validation (W3C HTML Validator, Jigsaw CSS Validator, JSHint) and structured manual testing (functionality, usability, and responsiveness across devices and browsers) were carried out once the core build of each page was complete, with all bugs found during this process documented, fixed, and retested.
+
+**Deployment**
+The site was deployed early via GitHub Pages, directly from the `main` branch, so that functionality could be verified on the live, deployed environment throughout development rather than only at the end. Each subsequent push automatically redeployed the site, allowing issues to be caught and corrected on the real production version.
+
+**Responding to Feedback**
+Several changes were made in direct response to tutor feedback, including: correcting the Injury Library layout and class-name bug, increasing logo size and trimming excess padding from its source SVG, strengthening hero banner contrast through multiple combined techniques, adding finished-site screenshots paired with their corresponding user stories, and expanding this Development Process section itself.
+
+This project is version-controlled using Git, with a separate, descriptively-messaged commit for each feature or fix — see commit history for a full chronological record of this process.
