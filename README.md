@@ -194,14 +194,19 @@ Testing was carried out continuously throughout development rather than only at 
 
 ### Bugs Found & Fixed
 
-| Bug | Cause | Fix |
-|---|---|---|
-| Stylesheet not loading; page rendered unstyled | Duplicated quotation marks on multiple HTML attributes (e.g. `rel=""stylesheet"`), corrupting the `<link>` tag | Corrected all malformed attribute quotes across `index.html` |
-| Mobile navigation menu overlapped the hamburger toggle button | `.main-nav` remained a row-based flex container on mobile instead of wrapping | Added `flex-wrap: wrap` and `flex-basis: 100%` to force the menu onto its own line |
-| Hamburger icon rendered below the nav menu instead of above it | Missing `order` values on flex children | Set explicit `order` values on `.nav-toggle` and `.nav-menu` |
-| Hero background image not displaying | Invalid space between `linear-gradient` and its opening parenthesis, invalidating the CSS declaration | Removed the space so the function syntax was valid |
-| CSS syntax errors cascading across the stylesheet | A missing semicolon after one property value | Added the missing semicolon; confirmed fix via VS Code's Problems panel |
-| JSHint reported 13 warnings on `script.js` | Linter defaulted to ES5, flagging valid ES6 syntax (`const`, `let`, arrow functions, template literals) as errors | Added `/* jshint esversion: 6 */` to the top of the file, resolving all warnings |
+| Bug | Cause | Fix | Retested? |
+|---|---|---|---|
+| Stylesheet not loading; page rendered unstyled | Duplicated quotation marks on multiple HTML attributes, corrupting the `<link>` tag | Corrected all malformed attribute quotes | ✅ Retested in-browser — stylesheet loaded correctly, styling applied as expected |
+| Mobile navigation menu overlapped the hamburger toggle | `.main-nav` remained a row-based flex container on mobile | Added `flex-wrap: wrap` and `flex-basis: 100%` | ✅ Retested on mobile view — menu dropped cleanly below toggle |
+| Hamburger icon rendered below the nav menu | Missing `order` values on flex children | Set explicit `order` values on `.nav-toggle` and `.nav-menu` | ✅ Retested — hamburger consistently appears above menu |
+| Hero background image not displaying | Invalid space in `linear-gradient()` function | Removed the space | ✅ Retested — background image rendered correctly |
+| CSS syntax errors cascading across stylesheet | Missing semicolon after one property value | Added missing semicolon | ✅ Retested via VS Code Problems panel — all related errors cleared |
+| JSHint reported 13 warnings on `script.js` | Linter defaulted to ES5, flagging valid ES6 syntax | Added `/* jshint esversion: 6 */` | ✅ Retested on jshint.com — all 13 warnings cleared |
+| Injury Library images rendered oversized, squeezing text | HTML `class="injury-icon"` didn't match CSS `.injury-image` selector | Corrected class name and added `.injury-text` flex wrapper | ✅ Retested — images sized correctly at 56×78px, text no longer wrapping excessively |
+| Logo appeared small despite height increases | Logo SVG had excess padding baked into its canvas/viewBox | Tightened the viewBox to reduce padding | ✅ Retested — logo visibly larger at the same CSS height |
+| Hero text contrast insufficient against background photo | Light areas of photo reduced text legibility | Added text-shadow, increased overlay opacity, darkened image via `filter: brightness()` | ✅ Retested — text legible across all areas of the image |
+
+**Known unresolved issues:** None currently identified. All bugs found during development and testing have been fixed and retested successfully.
 
 All bugs listed above were identified through manual testing in-browser and resolved before final deployment. No known issues remain in the current build.
 
