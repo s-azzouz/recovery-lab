@@ -317,12 +317,19 @@ img {
 }
 /* ===== Responsive: Tablet & Mobile ===== */
 @media (max-width: 768px) {
-
+    .logo-img {
+    height: 50px;
+    }
   .site-header {
     flex-wrap: wrap;
   }
 
   .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
     display: block;
   }
 
