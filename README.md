@@ -187,6 +187,9 @@ Testing was carried out continuously throughout development rather than only at 
 | Desktop navigation | Clicked each nav link in the header | Each link navigates to the correct page | All links navigated correctly | ✅ Pass |
 | Mobile navigation toggle | Resized to mobile width and clicked the hamburger icon | Menu opens and closes, `aria-expanded` updates | Menu toggled correctly, attribute updated as expected | ✅ Pass |
 | Responsive layout | Resized browser window below 768px | Nav collapses to hamburger, feature cards stack vertically | Layout adapted correctly at the breakpoint | ✅ Pass |
+| Form usability | Attempted to submit form without reading labels | User can understand each field's purpose from its label alone | Labels were clear; no ambiguity found | ✅ Pass |
+| Injury Library readability | Read through injury descriptions on mobile | Text remains legible without excessive wrapping | Text displayed clearly after image/text layout fix | ✅ Pass |
+
 
 
 ### Bugs Found & Fixed
