@@ -70,7 +70,7 @@ Home | Recovery Plan | Injury Library | Contact| About
 
 ## UX Design Rationale
 
-_This section will be expanded once wireframes and mockups are complete. It will cover:_
+This section covers the UX design decisions made for RecoveryLab:
 
 - Information hierarchy and how content is prioritised on each page
 - User flow through the site (from landing to booking a consultation)
@@ -78,7 +78,8 @@ _This section will be expanded once wireframes and mockups are complete. It will
 - Accessibility decisions (contrast ratios, alt text, keyboard navigation)
 - How the design allows users to initiate and control actions (e.g. no forced pop-ups or autoplay media)
 
-Wireframes and mockups will be added to a `/design` directory and referenced here as they are produced.
+Wireframes and mockups for each page are included in the `/design` directory and referenced below.
+
 
 ### Homepage Wireframe
 
