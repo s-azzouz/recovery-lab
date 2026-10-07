@@ -256,5 +256,6 @@ The site was deployed early via GitHub Pages, directly from the `main` branch, s
 
 **Responding to Feedback**
 Several changes were made in direct response to tutor feedback, including: correcting the Injury Library layout and class-name bug, increasing logo size and trimming excess padding from its source SVG, strengthening hero banner contrast through multiple combined techniques, adding finished-site screenshots paired with their corresponding user stories, and expanding this Development Process section itself.
+The use of AI(claude) was implemented throughout the projects creation, to aid in debugging and validating code issues (malformed html attributes, CSS errors, etc.) It was also used to improve format of the readme.
 
 This project is version-controlled using Git, with a separate, descriptively-messaged commit for each feature or fix — see commit history for a full chronological record of this process.
