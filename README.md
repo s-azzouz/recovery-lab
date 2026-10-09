@@ -27,12 +27,12 @@ RecoveryLab is a website that helps athletes and gym-goers safely recover from i
 
 **As an injured athlete, I want to apply for a recovery consultation through a short online form, so that I can get expert help without a lengthy or complicated sign-up process.**
 
-![Finished Recovery Plan page](assets/screenshots/recovery-plan-final.pngscreenshots/recovery-plan-final.png)
+![Finished Recovery Plan page](assets/screenshots/recovery-plan-final.png)
 *The finished Recovery Plan page, showing the short consultation application form that fulfils this user story.*
 
 **As a gym-goer recovering from injury, I want to browse a library of common injuries, so that I understand my condition before applying for a consultation.**
 
-![Finished Injury Library page](assets/screenshots/injury-library-final.pngscreenshots/injury-library-final.png)
+![Finished Injury Library page](assets/screenshots/injury-library-final.png)
 *The finished Injury Library page, showing the body-diagram entries that fulfil this user story.*
 
 ## Site Owner Story
@@ -70,7 +70,7 @@ Home | Recovery Plan | Injury Library | Contact| About
 
 ## UX Design Rationale
 
-_This section will be expanded once wireframes and mockups are complete. It will cover:_
+This section covers the UX design decisions made for RecoveryLab:
 
 - Information hierarchy and how content is prioritised on each page
 - User flow through the site (from landing to booking a consultation)
@@ -78,15 +78,14 @@ _This section will be expanded once wireframes and mockups are complete. It will
 - Accessibility decisions (contrast ratios, alt text, keyboard navigation)
 - How the design allows users to initiate and control actions (e.g. no forced pop-ups or autoplay media)
 
-Wireframes and mockups will be added to a `/design` directory and referenced here as they are produced.
+Wireframes and mockups for each page are included in the `/design` directory and referenced below.
+
 
 ### Homepage Wireframe
 
 ![Homepage wireframe – desktop and mobile](design/recoverylab-homepage-wireframe.svg)
 
 The homepage wireframe shows the main navigation (Homepage, Recovery Plan, Injury Library, Contact, About), a clear visual hierarchy from hero to feature cards to footer, and consistent card styling across the three feature highlights. The mobile layout collapses the navigation into a menu icon and restacks the feature cards vertically, preserving the same content order and priority as desktop.
-?. ,BVCXZ`
-'L;### Recovery Plan Wireframe
 
 ![Recovery Plan wireframe – desktop and mobile](design/recoverylab-recovery-plan-wireframe.svg)
 
@@ -175,28 +174,38 @@ Testing was carried out continuously throughout development rather than only at 
 | MacBook Pro (desktop) | Opera | Used to cross-check rendering consistency |
 | iPhone (mobile) | Safari | Used to test responsive breakpoint and mobile navigation |
 
+
 ### Test Cases — User Story Validation
 
-| User Story | Test | Result |
-|---|---|---|
-| As an injured athlete, I want to apply for a recovery consultation through a short online form | Submit form with all required fields completed | ✅ Confirmation message displays, form resets |
-| | Submit form with required fields left empty | ✅ Red error messages appear per field, submission blocked |
-| | Submit form with an invalid email format | ✅ "Please enter a valid email address" error shown |
-| As a gym-goer recovering from injury, I want to browse a library of common injuries | Navigate to Injury Library and view all 6 entries | ✅ All entries display with heading, description, and diagram |
-| Site-wide navigation | Click each nav link on desktop | ✅ All links navigate to the correct page |
-| | Open/close mobile menu via hamburger icon | ✅ Menu toggles open and closed, `aria-expanded` updates correctly |
-| Responsive layout | Resize browser below 768px width | ✅ Nav collapses to hamburger, feature cards stack, layout remains readable |
+| What Was Tested | Action Performed | Expected Result | Actual Result | Pass/Fail |
+|---|---|---|---|---|
+| Recovery Plan form submission | Filled all required fields correctly and clicked Submit | Confirmation message displays, form resets | Confirmation message displayed, form reset as expected | ✅ Pass |
+| Recovery Plan form validation | Submitted form with required fields left empty | Red error messages appear per field, submission blocked | Error messages appeared correctly, form did not submit | ✅ Pass |
+| Recovery Plan email validation | Entered an invalid email format and submitted | "Please enter a valid email address" error shown | Error message displayed as expected | ✅ Pass |
+| Injury Library content | Navigated to Injury Library and viewed all entries | All 6 entries display with heading, description, and diagram | All 6 entries displayed correctly | ✅ Pass |
+| Desktop navigation | Clicked each nav link in the header | Each link navigates to the correct page | All links navigated correctly | ✅ Pass |
+| Mobile navigation toggle | Resized to mobile width and clicked the hamburger icon | Menu opens and closes, `aria-expanded` updates | Menu toggled correctly, attribute updated as expected | ✅ Pass |
+| Responsive layout | Resized browser window below 768px | Nav collapses to hamburger, feature cards stack vertically | Layout adapted correctly at the breakpoint | ✅ Pass |
+| Form usability | Attempted to submit form without reading labels | User can understand each field's purpose from its label alone | Labels were clear; no ambiguity found | ✅ Pass |
+| Injury Library readability | Read through injury descriptions on mobile | Text remains legible without excessive wrapping | Text displayed clearly after image/text layout fix | ✅ Pass |
+
+
 
 ### Bugs Found & Fixed
 
-| Bug | Cause | Fix |
-|---|---|---|
-| Stylesheet not loading; page rendered unstyled | Duplicated quotation marks on multiple HTML attributes (e.g. `rel=""stylesheet"`), corrupting the `<link>` tag | Corrected all malformed attribute quotes across `index.html` |
-| Mobile navigation menu overlapped the hamburger toggle button | `.main-nav` remained a row-based flex container on mobile instead of wrapping | Added `flex-wrap: wrap` and `flex-basis: 100%` to force the menu onto its own line |
-| Hamburger icon rendered below the nav menu instead of above it | Missing `order` values on flex children | Set explicit `order` values on `.nav-toggle` and `.nav-menu` |
-| Hero background image not displaying | Invalid space between `linear-gradient` and its opening parenthesis, invalidating the CSS declaration | Removed the space so the function syntax was valid |
-| CSS syntax errors cascading across the stylesheet | A missing semicolon after one property value | Added the missing semicolon; confirmed fix via VS Code's Problems panel |
-| JSHint reported 13 warnings on `script.js` | Linter defaulted to ES5, flagging valid ES6 syntax (`const`, `let`, arrow functions, template literals) as errors | Added `/* jshint esversion: 6 */` to the top of the file, resolving all warnings |
+| Bug | Cause | Fix | Retested? |
+|---|---|---|---|
+| Stylesheet not loading; page rendered unstyled | Duplicated quotation marks on multiple HTML attributes, corrupting the `<link>` tag | Corrected all malformed attribute quotes | ✅ Retested in-browser — stylesheet loaded correctly, styling applied as expected |
+| Mobile navigation menu overlapped the hamburger toggle | `.main-nav` remained a row-based flex container on mobile | Added `flex-wrap: wrap` and `flex-basis: 100%` | ✅ Retested on mobile view — menu dropped cleanly below toggle |
+| Hamburger icon rendered below the nav menu | Missing `order` values on flex children | Set explicit `order` values on `.nav-toggle` and `.nav-menu` | ✅ Retested — hamburger consistently appears above menu |
+| Hero background image not displaying | Invalid space in `linear-gradient()` function | Removed the space | ✅ Retested — background image rendered correctly |
+| CSS syntax errors cascading across stylesheet | Missing semicolon after one property value | Added missing semicolon | ✅ Retested via VS Code Problems panel — all related errors cleared |
+| JSHint reported 13 warnings on `script.js` | Linter defaulted to ES5, flagging valid ES6 syntax | Added `/* jshint esversion: 6 */` | ✅ Retested on jshint.com — all 13 warnings cleared |
+| Injury Library images rendered oversized, squeezing text | HTML `class="injury-icon"` didn't match CSS `.injury-image` selector | Corrected class name and added `.injury-text` flex wrapper | ✅ Retested — images sized correctly at 56×78px, text no longer wrapping excessively |
+| Logo appeared small despite height increases | Logo SVG had excess padding baked into its canvas/viewBox | Tightened the viewBox to reduce padding | ✅ Retested — logo visibly larger at the same CSS height |
+| Hero text contrast insufficient against background photo | Light areas of photo reduced text legibility | Added text-shadow, increased overlay opacity, darkened image via `filter: brightness()` | ✅ Retested — text legible across all areas of the image |
+
+**Known unresolved issues:** None currently identified. All bugs found during development and testing have been fixed and retested successfully.
 
 All bugs listed above were identified through manual testing in-browser and resolved before final deployment. No known issues remain in the current build.
 
@@ -222,4 +231,31 @@ Any future changes pushed to `main` are automatically redeployed by GitHub Pages
 
 ## Development Process
 
-This project is developed using Git, with a separate commit for each feature or major adjustment. Commit messages describe what changed and why.
+This project followed an iterative development lifecycle, moving through planning, design, implementation, testing, and deployment — with earlier stages revisited as understanding of the project deepened.
+
+**Planning and Requirements**
+The project began with a milestone project plan defining the site's purpose, target audience, site owner goals, and potential features. User stories and a site owner story were written to capture what the finished site needed to achieve, and were later refined once the final feature set was confirmed, to ensure they accurately reflected what was built.
+
+**Design**
+A desktop and mobile wireframe was created for the homepage first, establishing the navigation structure, visual hierarchy, and card-based layout pattern that was then carried through to the remaining pages (Recovery Plan, Injury Library, Contact, About), each of which was also wireframed individually once the design system was established.
+
+**Development / Implementation**
+Each page was built HTML-first (semantic structure with no styling), followed by CSS in focused, single-purpose commits (e.g. header, hero, feature cards, forms), then JavaScript for interactivity such as the mobile navigation toggle and consultation form validation. The design system (colour palette, typography, spacing) was defined early using CSS custom properties, so later pages could reuse it consistently rather than duplicating values.
+
+**Testing and Debugging**
+Testing was carried out continuously throughout development, not only at the end. Real examples of this process include:
+- A stylesheet failing to load site-wide was traced to malformed, duplicated quotation marks in HTML attributes, and fixed by correcting the markup across every page.
+- A missing semicolon in a CSS declaration caused a cascade of unrelated-looking validator errors; this was diagnosed using VS Code's Problems panel rather than guesswork.
+- An accessibility review of the Injury Library page (raised in tutor feedback) revealed a class name mismatch between the HTML and CSS, meaning images were never actually being sized — this was corrected, and a flex-based text wrapper was added to resolve the resulting narrow-text-wrapping issue.
+- Feedback also identified insufficient colour contrast on the hero banner text against its background photograph. This was resolved using a combination of a text-shadow, a darkened background image via a CSS filter, and a stronger overlay — rather than a single fix, to ensure contrast held across all areas of the image.
+
+Formal validation (W3C HTML Validator, Jigsaw CSS Validator, JSHint) and structured manual testing (functionality, usability, and responsiveness across devices and browsers) were carried out once the core build of each page was complete, with all bugs found during this process documented, fixed, and retested.
+
+**Deployment**
+The site was deployed early via GitHub Pages, directly from the `main` branch, so that functionality could be verified on the live, deployed environment throughout development rather than only at the end. Each subsequent push automatically redeployed the site, allowing issues to be caught and corrected on the real production version.
+
+**Responding to Feedback**
+Several changes were made in direct response to tutor feedback, including: correcting the Injury Library layout and class-name bug, increasing logo size and trimming excess padding from its source SVG, strengthening hero banner contrast through multiple combined techniques, adding finished-site screenshots paired with their corresponding user stories, and expanding this Development Process section itself.
+The use of AI(claude) was implemented throughout the projects creation, to aid in debugging and validating code issues (malformed html attributes, CSS errors, etc.) It was also used to improve format of the readme.
+
+This project is version-controlled using Git, with a separate, descriptively-messaged commit for each feature or fix — see commit history for a full chronological record of this process.
