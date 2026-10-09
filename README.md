@@ -179,15 +179,15 @@ Testing was carried out continuously throughout development rather than only at 
 
 | What Was Tested | Action Performed | Expected Result | Actual Result | Pass/Fail |
 |---|---|---|---|---|
-| Recovery Plan form submission | Filled all required fields correctly and clicked Submit | Confirmation message displays, form resets | Confirmation message displayed, form reset as expected | ✅ Pass |
-| Recovery Plan form validation | Submitted form with required fields left empty | Red error messages appear per field, submission blocked | Error messages appeared correctly, form did not submit | ✅ Pass |
-| Recovery Plan email validation | Entered an invalid email format and submitted | "Please enter a valid email address" error shown | Error message displayed as expected | ✅ Pass |
-| Injury Library content | Navigated to Injury Library and viewed all entries | All 6 entries display with heading, description, and diagram | All 6 entries displayed correctly | ✅ Pass |
-| Desktop navigation | Clicked each nav link in the header | Each link navigates to the correct page | All links navigated correctly | ✅ Pass |
-| Mobile navigation toggle | Resized to mobile width and clicked the hamburger icon | Menu opens and closes, `aria-expanded` updates | Menu toggled correctly, attribute updated as expected | ✅ Pass |
-| Responsive layout | Resized browser window below 768px | Nav collapses to hamburger, feature cards stack vertically | Layout adapted correctly at the breakpoint | ✅ Pass |
-| Form usability | Attempted to submit form without reading labels | User can understand each field's purpose from its label alone | Labels were clear; no ambiguity found | ✅ Pass |
-| Injury Library readability | Read through injury descriptions on mobile | Text remains legible without excessive wrapping | Text displayed clearly after image/text layout fix | ✅ Pass |
+| Recovery Plan form submission | Filled all required fields correctly and clicked Submit | Confirmation message displays, form resets | Confirmation message displayed, form reset as expected |  Pass |
+| Recovery Plan form validation | Submitted form with required fields left empty | Red error messages appear per field, submission blocked | Error messages appeared correctly, form did not submit | Pass |
+| Recovery Plan email validation | Entered an invalid email format and submitted | "Please enter a valid email address" error shown | Error message displayed as expected |  Pass |
+| Injury Library content | Navigated to Injury Library and viewed all entries | All 6 entries display with heading, description, and diagram | All 6 entries displayed correctly |  Pass |
+| Desktop navigation | Clicked each nav link in the header | Each link navigates to the correct page | All links navigated correctly |  Pass |
+| Mobile navigation toggle | Resized to mobile width and clicked the hamburger icon | Menu opens and closes, `aria-expanded` updates | Menu toggled correctly, attribute updated as expected |  Pass |
+| Responsive layout | Resized browser window below 768px | Nav collapses to hamburger, feature cards stack vertically | Layout adapted correctly at the breakpoint |  Pass |
+| Form usability | Attempted to submit form without reading labels | User can understand each field's purpose from its label alone | Labels were clear; no ambiguity found |  Pass |
+| Injury Library readability | Read through injury descriptions on mobile | Text remains legible without excessive wrapping | Text displayed clearly after image/text layout fix |  Pass |
 
 
 
@@ -195,15 +195,15 @@ Testing was carried out continuously throughout development rather than only at 
 
 | Bug | Cause | Fix | Retested? |
 |---|---|---|---|
-| Stylesheet not loading; page rendered unstyled | Duplicated quotation marks on multiple HTML attributes, corrupting the `<link>` tag | Corrected all malformed attribute quotes | ✅ Retested in-browser — stylesheet loaded correctly, styling applied as expected |
-| Mobile navigation menu overlapped the hamburger toggle | `.main-nav` remained a row-based flex container on mobile | Added `flex-wrap: wrap` and `flex-basis: 100%` | ✅ Retested on mobile view — menu dropped cleanly below toggle |
-| Hamburger icon rendered below the nav menu | Missing `order` values on flex children | Set explicit `order` values on `.nav-toggle` and `.nav-menu` | ✅ Retested — hamburger consistently appears above menu |
-| Hero background image not displaying | Invalid space in `linear-gradient()` function | Removed the space | ✅ Retested — background image rendered correctly |
-| CSS syntax errors cascading across stylesheet | Missing semicolon after one property value | Added missing semicolon | ✅ Retested via VS Code Problems panel — all related errors cleared |
-| JSHint reported 13 warnings on `script.js` | Linter defaulted to ES5, flagging valid ES6 syntax | Added `/* jshint esversion: 6 */` | ✅ Retested on jshint.com — all 13 warnings cleared |
-| Injury Library images rendered oversized, squeezing text | HTML `class="injury-icon"` didn't match CSS `.injury-image` selector | Corrected class name and added `.injury-text` flex wrapper | ✅ Retested — images sized correctly at 56×78px, text no longer wrapping excessively |
-| Logo appeared small despite height increases | Logo SVG had excess padding baked into its canvas/viewBox | Tightened the viewBox to reduce padding | ✅ Retested — logo visibly larger at the same CSS height |
-| Hero text contrast insufficient against background photo | Light areas of photo reduced text legibility | Added text-shadow, increased overlay opacity, darkened image via `filter: brightness()` | ✅ Retested — text legible across all areas of the image |
+| Stylesheet not loading; page rendered unstyled | Duplicated quotation marks on multiple HTML attributes, corrupting the `<link>` tag | Corrected all malformed attribute quotes |  Retested in-browser — stylesheet loaded correctly, styling applied as expected |
+| Mobile navigation menu overlapped the hamburger toggle | `.main-nav` remained a row-based flex container on mobile | Added `flex-wrap: wrap` and `flex-basis: 100%` |  Retested on mobile view — menu dropped cleanly below toggle |
+| Hamburger icon rendered below the nav menu | Missing `order` values on flex children | Set explicit `order` values on `.nav-toggle` and `.nav-menu` |  Retested — hamburger consistently appears above menu |
+| Hero background image not displaying | Invalid space in `linear-gradient()` function | Removed the space |  Retested — background image rendered correctly |
+| CSS syntax errors cascading across stylesheet | Missing semicolon after one property value | Added missing semicolon |  Retested via VS Code Problems panel — all related errors cleared |
+| JSHint reported 13 warnings on `script.js` | Linter defaulted to ES5, flagging valid ES6 syntax | Added `/* jshint esversion: 6 */` |  Retested on jshint.com — all 13 warnings cleared |
+| Injury Library images rendered oversized, squeezing text | HTML `class="injury-icon"` didn't match CSS `.injury-image` selector | Corrected class name and added `.injury-text` flex wrapper |  Retested — images sized correctly at 56×78px, text no longer wrapping excessively |
+| Logo appeared small despite height increases | Logo SVG had excess padding baked into its canvas/viewBox | Tightened the viewBox to reduce padding |  Retested — logo visibly larger at the same CSS height |
+| Hero text contrast insufficient against background photo | Light areas of photo reduced text legibility | Added text-shadow, increased overlay opacity, darkened image via `filter: brightness()` |  Retested — text legible across all areas of the image |
 
 **Known unresolved issues:** None currently identified. All bugs found during development and testing have been fixed and retested successfully.
 
