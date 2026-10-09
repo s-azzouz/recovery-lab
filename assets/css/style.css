@@ -191,7 +191,7 @@ img {
 
 .btn-primary {
   background-color: var(--color-orange);
-  color: var(--color-white);
+  color: var(--color-dark-blue);
 }
 
 .btn-primary:hover,
